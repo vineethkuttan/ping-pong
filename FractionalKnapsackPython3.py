@@ -12,6 +12,7 @@ def knapsack(w,v,c):
             val+=i*c
             c=0
             return val
+    return val
 
 if __name__ == '__main__':
     n=int(input('Enter the number of items  '))
