@@ -3,12 +3,13 @@ using namespace std;
 typedef pair<int,int> p;
 queue<p> q;
 #define MAX 250
-int g[MAX][MAX],temp[MAX][MAX],n,m;
+int g[MAX][MAX],n,m;
+bool temp[MAX][MAX];
 int arr[][2]={{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
 int c=0;
 void place(int a,int b)
 {
-    temp[a][b]=1;
+    temp[a][b]=true;
     c+=1;
    for(int i=0;i<8;i++)
     {
@@ -58,7 +59,7 @@ int main()
             {
                 if(g[i][j])
                 {
-                    memset(temp,0,sizeof(temp));
+                    memset(temp,false,sizeof(temp));
                     place(i,j);
                     ma=max(ma,c);
                     c=0;
