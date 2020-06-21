@@ -46,6 +46,8 @@ void primefactors(lli n)
             }
             n=n/i;
         }
+        if(n==1)
+            break;
     }
     if(n>2)
     {
