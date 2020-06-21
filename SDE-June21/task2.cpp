@@ -32,6 +32,8 @@ void primefactors(lli n)
             v.push_back(i);
             n=n/i;
         }
+        if(n==1)
+            break;
     }
     if(n>2)
     {
